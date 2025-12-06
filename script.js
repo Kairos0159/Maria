@@ -679,28 +679,60 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 5000);
     }
     
-    // ===== PDF CARDS 3D =====
-    function setupPDFCards() {
-        const pdfCards = document.querySelectorAll('.pdf-card-3d');
-        
-        pdfCards.forEach(card => {
-            const flipBtn = card.querySelector('[data-action="flip"]');
-            const flipBackBtn = card.querySelector('[data-action="flip-back"]');
-            
-            if (flipBtn) {
-                flipBtn.addEventListener('click', () => {
-                    card.classList.add('flipped');
-                });
-            }
-            
-            if (flipBackBtn) {
-                flipBackBtn.addEventListener('click', () => {
-                    card.classList.remove('flipped');
-                });
-            }
-        });
-    }
+// ===== PDF CARDS 3D =====
+function setupPDFCards() {
+    const pdfCards = document.querySelectorAll('.pdf-card-3d');
     
+    pdfCards.forEach(card => {
+        const flipBtn = card.querySelector('[data-action="flip"]');
+        const flipBackBtn = card.querySelector('[data-action="flip-back"]');
+        
+        if (flipBtn) {
+            flipBtn.addEventListener('click', () => {
+                card.classList.add('flipped');
+                
+                // En móviles, hacer scroll automático para ver los botones
+                if (window.innerWidth <= 768) {
+                    setTimeout(() => {
+                        const cardRect = card.getBoundingClientRect();
+                        const viewportHeight = window.innerHeight;
+                        
+                        // Si la tarjeta está muy abajo, hacer scroll
+                        if (cardRect.bottom > viewportHeight - 100) {
+                            card.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'center'
+                            });
+                        }
+                    }, 100);
+                }
+            });
+        }
+        
+        if (flipBackBtn) {
+            flipBackBtn.addEventListener('click', () => {
+                card.classList.remove('flipped');
+            });
+        }
+        
+        // En móviles, agregar un botón de "Volver" más visible
+        if (window.innerWidth <= 768) {
+            const backBtn = card.querySelector('.btn-close');
+            if (backBtn) {
+                backBtn.innerHTML = '<i class="fas fa-arrow-left"></i> Volver';
+                backBtn.style.fontWeight = '600';
+                backBtn.style.backgroundColor = 'var(--theme-border)';
+            }
+        }
+    });
+    
+    // Asegurar que los PDF se vean bien en móvil
+    const pdfIframes = document.querySelectorAll('.pdf-preview iframe');
+    pdfIframes.forEach(iframe => {
+        iframe.style.minHeight = '200px';
+        iframe.style.height = '100%';
+    });
+}
     // ===== VIDEOS =====
     function setupVideos() {
         const videos = document.querySelectorAll('video');

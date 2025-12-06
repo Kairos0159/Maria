@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Académico UD - Actividades del Semestre</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+    <!-- Cursor personalizado -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <!-- Partículas de fondo -->
+    <div class="particles-container"></div>
+    
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-circle"></div>
+            <div class="loader-circle"></div>
+            <div class="loader-circle"></div>
+            <div class="loader-text">Cargando portal académico</div>
+        </div>
+    </div>
+    
+    <!-- Header con efectos especiales -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo con animación -->
+            <div class="logo-wrapper">
+                <div class="logo-animation">
+                    <div class="logo-circle"></div>
+                    <div class="logo-circle"></div>
+                    <div class="logo-circle"></div>
+                </div>
+                <div class="logo-text">
+                    <h1 class="logo-title">Portal Académico <span class="highlight">UD</span></h1>
+                    <p class="logo-subtitle">Universidad Distrital F.J.C.</p>
+                </div>
+            </div>
+            
+            <!-- Controles del header -->
+            <div class="header-controls">
+                <!-- Botón modo oscuro/claro -->
+                <div class="theme-switch-wrapper">
+                    <div class="theme-switch">
+                        <input type="checkbox" id="theme-toggle" class="theme-checkbox">
+                        <label for="theme-toggle" class="theme-label">
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-moon"></i>
+                            <div class="theme-ball"></div>
+                        </label>
+                    </div>
+                    <span class="theme-text">Modo</span>
+                </div>
+                
+                <!-- Menú hamburguesa animado -->
+                <button class="hamburger" id="menu-toggle" aria-label="Menú">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación con efectos -->
+    <nav class="navigation" id="main-nav">
+        <div class="nav-container">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#inicio" class="nav-link active" data-link="inicio">
+                        <i class="fas fa-home"></i>
+                        <span class="nav-text">Inicio</span>
+                        <div class="nav-dot"></div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#actividades" class="nav-link" data-link="actividades">
+                        <i class="fas fa-file-pdf"></i>
+                        <span class="nav-text">Actividades PDF</span>
+                        <div class="nav-dot"></div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#videos" class="nav-link" data-link="videos">
+                        <i class="fas fa-play-circle"></i>
+                        <span class="nav-text">Videos</span>
+                        <div class="nav-dot"></div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#recursos" class="nav-link" data-link="recursos">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span class="nav-text">Recursos</span>
+                        <div class="nav-dot"></div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#galeria" class="nav-link" data-link="galeria">
+                        <i class="fas fa-images"></i>
+                        <span class="nav-text">Galería</span>
+                        <div class="nav-dot"></div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contacto" class="nav-link" data-link="contacto">
+                        <i class="fas fa-envelope"></i>
+                        <span class="nav-text">Contacto</span>
+                        <div class="nav-dot"></div>
+                    </a>
+                </li>
+            </ul>
+            
+            <!-- Indicador de progreso de scroll -->
+            <div class="scroll-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <!-- Sección Inicio -->
+        <section id="inicio" class="page-section active-section" data-section="inicio">
+            <!-- Hero con efecto parallax -->
+            <div class="hero parallax-section">
+                <div class="hero-content">
+                    <div class="hero-text-wrapper">
+                        <h2 class="hero-title animate-text">
+                            <span class="text-line">Explora el conocimiento</span>
+                            <span class="text-line">en la <span class="highlight">Universidad Distrital</span></span>
+                        </h2>
+                        <p class="hero-subtitle animate-text-delay">
+                            Portal interactivo de actividades académicas del semestre. 
+                            Descubre materiales, recursos multimedia y proyectos desarrollados.
+                        </p>
+                    </div>
+                    <!-- Estadísticas flotantes -->
+                    <div class="hero-stats">
+                        <div class="stat-card floating">
+                            <div class="stat-icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number" data-count="3">0</div>
+                                <div class="stat-label">Actividades PDF</div>
+                            </div>
+                        </div>
+                        <div class="stat-card floating delay-1">
+                            <div class="stat-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number" data-count="2">0</div>
+                                <div class="stat-label">Videos Educativos</div>
+                            </div>
+                        </div>
+                        <div class="stat-card floating delay-2">
+                            <div class="stat-icon">
+                                <i class="fas fa-link"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number" data-count="2">0</div>
+                                <div class="stat-label">Recursos Web</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Elementos decorativos flotantes -->
+                <div class="floating-elements">
+                    <div class="float-element el-1"><i class="fas fa-book"></i></div>
+                    <div class="float-element el-2"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="float-element el-3"><i class="fas fa-laptop-code"></i></div>
+                    <div class="float-element el-4"><i class="fas fa-flask"></i></div>
+                </div>
+                
+                <!-- Flecha para bajar -->
+                <div class="scroll-down">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div class="arrow">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carrusel moderno -->
+            <div class="carousel-section">
+                <div class="section-header">
+                    <h3 class="section-title">Galería Universitaria</h3>
+                    <p class="section-subtitle">Espacios y actividades que definen nuestra experiencia académica</p>
+                </div>
+                
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <div class="carousel-slide active">
+                            <div class="slide-image">
+                                <img src="imagenes/img1.jpg" alt="Campus Universitario" onerror="this.src='https://images.unsplash.com/photo-1562774053-701939374585?w=1200&h=600&fit=crop'">
+                                <div class="image-overlay"></div>
+                            </div>
+                            <div class="slide-content">
+                                <div class="slide-badge">Campus</div>
+                                <h4 class="slide-title">Corazón Académico</h4>
+                                <p class="slide-description">El campus principal donde convergen el conocimiento y la innovación.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-slide">
+                            <div class="slide-image">
+                                <img src="imagenes/img4.jpg" alt="Biblioteca" onerror="this.src='https://images.unsplash.com/photo-1589998059171-988d887df646?w=1200&h=600&fit=crop'">
+                                <div class="image-overlay"></div>
+                            </div>
+                            <div class="slide-content">
+                                <div class="slide-badge">Biblioteca</div>
+                                <h4 class="slide-title">Centro de Conocimiento</h4>
+                                <p class="slide-description">Espacio dedicado a la investigación y el estudio profundo.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-slide">
+                            <div class="slide-image">
+                                <img src="imagenes/img3.jpg" alt="Laboratorio" onerror="this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=600&fit=crop'">
+                                <div class="image-overlay"></div>
+                            </div>
+                            <div class="slide-content">
+                                <div class="slide-badge">Laboratorio</div>
+                                <h4 class="slide-title">Innovación Tecnológica</h4>
+                                <p class="slide-description">Donde las ideas se convierten en soluciones tecnológicas.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-slide">
+                            <div class="slide-image">
+                                <img src="imagenes/img5.jpg" alt="Estudio" onerror="this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&h=600&fit=crop'">
+                                <div class="image-overlay"></div>
+                            </div>
+                            <div class="slide-content">
+                                <div class="slide-badge">Estudio</div>
+                                <h4 class="slide-title">Espacios de Aprendizaje</h4>
+                                <p class="slide-description">Áreas diseñadas para el desarrollo intelectual.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-slide">
+                            <div class="slide-image">
+                                <img src="imagenes/img6.jpg" alt="Eventos" onerror="this.src='https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=1200&h=600&fit=crop'">
+                                <div class="image-overlay"></div>
+                            </div>
+                            <div class="slide-content">
+                                <div class="slide-badge">Eventos</div>
+                                <h4 class="slide-title">Cultura Estudiantil</h4>
+                                <p class="slide-description">Actividades que enriquecen la vida universitaria.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Controles del carrusel -->
+                    <div class="carousel-controls">
+                        <button class="carousel-btn prev-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        
+                        <div class="carousel-indicators">
+                            <span class="indicator active" data-index="0"></span>
+                            <span class="indicator" data-index="1"></span>
+                            <span class="indicator" data-index="2"></span>
+                            <span class="indicator" data-index="3"></span>
+                            <span class="indicator" data-index="4"></span>
+                        </div>
+                        
+                        <button class="carousel-btn next-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Actividades PDF -->
+        <section id="actividades" class="page-section" data-section="actividades">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Actividades del Semestre</h2>
+                    <p class="section-subtitle">Documentos académicos en formato PDF para descarga y consulta</p>
+                </div>
+                
+                <!-- PDF Cards con efectos 3D -->
+                <div class="pdf-cards-container">
+                    <div class="pdf-card-3d">
+                        <div class="pdf-card-inner">
+                            <div class="pdf-card-front">
+                                <div class="pdf-icon">
+                                    <i class="fas fa-file-pdf"></i>
+                                </div>
+                                <div class="pdf-content">
+                                    <h3>Introducción a la Tecnología</h3>
+                                    <div class="pdf-meta">
+                                        <span class="meta-item"><i class="fas fa-book"></i> Tecnología</span>
+                                        <span class="meta-item"><i class="fas fa-file"></i> 5 páginas</span>
+                                        <span class="meta-item"><i class="fas fa-weight"></i> 2.5 KB</span>
+                                    </div>
+                                    <p class="pdf-description">Conceptos básicos de tecnología y su aplicación en la vida diaria.</p>
+                                </div>
+                                <div class="pdf-action">
+                                    <button class="btn-flip" data-action="flip">
+                                        <span class="btn-flip-front">Ver PDF</span>
+                                        <span class="btn-flip-back"><i class="fas fa-sync-alt"></i></span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="pdf-card-back">
+                                <div class="pdf-preview">
+                                    <iframe src="pdf/pdf1.pdf" title="Actividad 1"></iframe>
+                                </div>
+                                <div class="pdf-actions">
+                                    <a href="pdf/pdf1.pdf" download class="btn btn-download">
+                                        <i class="fas fa-download"></i> Descargar
+                                    </a>
+                                    <a href="pdf/pdf1.pdf" target="_blank" class="btn btn-view">
+                                        <i class="fas fa-external-link-alt"></i> Abrir
+                                    </a>
+                                    <button class="btn btn-close" data-action="flip-back">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Videos -->
+        <section id="videos" class="page-section" data-section="videos">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Videos Educativos</h2>
+                    <p class="section-subtitle">Contenido audiovisual que complementa el aprendizaje</p>
+                </div>
+                
+                <!-- Videos con efecto hover -->
+                <div class="video-grid">
+                    <div class="video-card">
+                        <div class="video-header">
+                            <div class="video-badge">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3>El Futuro de la Tecnología</h3>
+                        </div>
+                        <div class="video-player-container">
+                            <div class="video-player">
+                                <video controls poster="imagenes/china1.jpg">
+                                    <source src="video/video1.mp4" type="video/mp4">
+                                    Tu navegador no soporta la reproducción de videos.
+                                </video>
+                                <div class="video-overlay">
+                                    <button class="play-btn">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <div class="video-meta">
+                                <span><i class="fas fa-clock"></i> 7:50 min</span>
+                                <span><i class="fas fa-eye"></i> Tendencias</span>
+                            </div>
+                            <p>Análisis sobre las tendencias tecnológicas que definirán nuestro futuro.</p>
+                            <div class="video-tags">
+                                <span class="tag">China</span>
+                                <span class="tag">Blockchain</span>
+                                <span class="tag">IoT</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="video-card">
+                        <div class="video-header">
+                            <div class="video-badge">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>IA en la Educación</h3>
+                        </div>
+                        <div class="video-player-container">
+                            <div class="video-player">
+                                <video controls poster="imagenes/ia.jpg">
+                                    <source src="video/videoplayback.mp4" type="video/mp4">
+                                    Tu navegador no soporta la reproducción de videos.
+                                </video>
+                                <div class="video-overlay">
+                                    <button class="play-btn">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <div class="video-meta">
+                                <span><i class="fas fa-clock"></i> 5:13 min</span>
+                                <span><i class="fas fa-eye"></i> Innovación</span>
+                            </div>
+                            <p>Cómo la Inteligencia Artificial está transformando los métodos de enseñanza.</p>
+                            <div class="video-tags">
+                                <span class="tag">Machine Learning</span>
+                                <span class="tag">Educación</span>
+                                <span class="tag">Innovación</span>
+                            </div>
+                        </div>
+                    </div>  <div class="video-card">
+                        <div class="video-header">
+                            <div class="video-badge">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>Actividad</h3>
+                        </div>
+                        <div class="video-player-container">
+                            <div class="video-player">
+                                <video controls poster="imagenes/Captura de pantalla 2025-12-06 141543.jpg">
+                                    <source src="video/Video de WhatsApp 2025-12-06 a las 09.38.38_9ed14117.mp4" type="video/mp4">
+                                    Tu navegador no soporta la reproducción de videos.
+                                </video>
+                                <div class="video-overlay">
+                                    <button class="play-btn">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Recursos -->
+        <section id="recursos" class="page-section" data-section="recursos">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Recursos Adicionales</h2>
+                    <p class="section-subtitle">Enlaces y herramientas para complementar tu aprendizaje</p>
+                </div>
+                
+                <!-- Tarjetas de recursos con efecto hover -->
+                <div class="resources-grid">
+                    <a href="https://www.jigsawplanet.com/?rc=play&pid=18ed8e58f663" target="_blank" class="resource-card hover-effect">
+                        <div class="resource-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3>Rompecabezas Digital</h3>
+                            <p>Actividad interactiva de rompecabezas en JigsawPlanet para desarrollar habilidades cognitivas.</p>
+                            <div class="resource-tags">
+                                <span class="tag">Interactivo</span>
+                                <span class="tag">JigsawPlanet</span>
+                                <span class="tag">Educación</span>
+                            </div>
+                        </div>
+                        <div class="resource-link">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                        <div class="hover-border"></div>
+                    </a>
+                    
+                    <a href="https://tinyurl.com/24pwjnfy" target="_blank" class="resource-card hover-effect">
+                        <div class="resource-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3>Voki - Avatares Animados</h3>
+                            <p>Plataforma para crear avatares animados personalizados para comunicación educativa.</p>
+                            <div class="resource-tags">
+                                <span class="tag">Animación</span>
+                                <span class="tag">Gratis</span>
+                                <span class="tag">Educación</span>
+                            </div>
+                        </div>
+                        <div class="resource-link">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                        <div class="hover-border"></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Galería -->
+        <section id="galeria" class="page-section" data-section="galeria">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Galería de Proyectos</h2>
+                    <p class="section-subtitle">Capturas y momentos de actividades universitarias</p>
+                </div>
+                
+                <!-- Galería con lightbox -->
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-image="img7.jpg">
+                        <img src="imagenes/img7.jpg" alt="Exposición de Proyectos" onerror="this.src='https://images.unsplash.com/photo-1555099962-4199c345e5dd?w=400&h=300&fit=crop'">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Exposición de Proyectos</h4>
+                                <p>Demostración de trabajos estudiantiles</p>
+                            </div>
+                            <div class="gallery-zoom">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="img8.jpg">
+                        <img src="imagenes/img8.jpg" alt="Laboratorio de Robótica" onerror="this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop'">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Laboratorio de Robótica</h4>
+                                <p>Innovación en automatización</p>
+                            </div>
+                            <div class="gallery-zoom">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="img9.jpg">
+                        <img src="imagenes/img9.jpg" alt="Workshop de Desarrollo" onerror="this.src='https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=400&h=300&fit=crop'">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Workshop de Desarrollo</h4>
+                                <p>Sesión práctica de programación</p>
+                            </div>
+                            <div class="gallery-zoom">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto" class="page-section" data-section="contacto">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Contacto</h2>
+                    <p class="section-subtitle">Comunícate para más información sobre las actividades</p>
+                </div>
+                
+                <div class="contact-grid">
+                    <!-- Información de contacto -->
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="contact-header">
+                                <h3><i class="fas fa-info-circle"></i> Información</h3>
+                            </div>
+                            <div class="contact-details">
+                                <div class="detail-item">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="detail-content">
+                                        <h4>Estudiante</h4>
+                                        <p>María Juliana Bermúdez Ruiz</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="detail-item">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                    <div class="detail-content">
+                                        <h4>Semestre</h4>
+                                        <p>Primero</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="detail-item">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-university"></i>
+                                    </div>
+                                    <div class="detail-content">
+                                        <h4>Universidad</h4>
+                                        <p>Universidad Distrital F.J.C.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="detail-item">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="detail-content">
+                                        <h4>Codigo</h4>
+                                        <p>20252140104</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="detail-item">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="detail-content">
+                                        <h4>Horario</h4>
+                                        <p>Lun-Vie, 8:00 AM - 6:00 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Formulario de contacto -->
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group floating-input">
+                                <input type="text" id="name" required>
+                                <label for="name">Nombre Completo</label>
+                                <div class="underline"></div>
+                            </div>
+                            
+                            <div class="form-group floating-input">
+                                <input type="email" id="email" required>
+                                <label for="email">Correo Electrónico</label>
+                                <div class="underline"></div>
+                            </div>
+                            
+                            <div class="form-group floating-input">
+                                <select id="subject" required>
+                                    <option value=""></option>
+                                    <option value="actividades">Consulta sobre actividades</option>
+                                    <option value="recursos">Información sobre recursos</option>
+                                    <option value="tecnico">Problema técnico</option>
+                                    <option value="general">Consulta general</option>
+                                </select>
+                                <label for="subject">Asunto</label>
+                                <div class="underline"></div>
+                            </div>
+                            
+                            <div class="form-group floating-input">
+                                <textarea id="message" rows="3" required></textarea>
+                                <label for="message">Mensaje</label>
+                                <div class="underline"></div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-submit">
+                                <span>Enviar Mensaje</span>
+                                <i class="fas fa-paper-plane"></i>
+                                <div class="submit-effect"></div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-symbol">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="footer-brand">
+                        <h4>Universidad Distrital</h4>
+                        <p>Francisco José de Caldas</p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h5>Navegación</h5>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#actividades">Actividades</a></li>
+                        <li><a href="#videos">Videos</a></li>
+                        <li><a href="#recursos">Recursos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h5>Síguenos</h5>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Portal Académico UD - Desarrollado por María Juliana Bermúdez Ruiz</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox para galería -->
+    <div class="lightbox">
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-image">
+            <div class="lightbox-caption">
+                <h3></h3>
+                <p></p>
+            </div>
+            <button class="lightbox-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="lightbox-prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Botón para subir -->
+    <button class="scroll-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
